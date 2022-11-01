@@ -1,0 +1,3 @@
+inux doesn't really have a way to work with "drives", per se, except with system utilities that access partitions; they often need to specify the drive that contains the partition. But if your drives each only have one partition, it doesn't really matter.
+
+Anyway, to access a drive, you actually need to specify the partition in some way, usually by a definition like /dev/sda1 (1st partition on 1st drive) or /dev/sda2 (2nd partition on first drive). Using the Disk Utility or gparted, you can see all the partitions graphically. If you're only using the terminal, I've found that the command "blkid" is handy to list the drives with their UUIDs. I use the form:
